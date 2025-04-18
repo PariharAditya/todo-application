@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+
+body {
+  background-color: #0a0a0a; /* Gotham City night */
+  color: #e0e0e0; /* Light gray for text */
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: radial-gradient(circle at center, #131313 0%, #0a0a0a 100%);
+}
+
+.batman-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+
+.app-container {
+  background-color: #1c1c1c; /* Dark gray for the container */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Add Batman-themed accents */
+.app-container::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 15px;
+  background-color: #ffcc00; /* Batman yellow */
+  clip-path: polygon(0% 0%, 30% 0%, 50% 100%, 70% 0%, 100% 0%, 80% 100%, 20% 100%);
+  opacity: 0.8;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  color: #ffcc00; /* Batman yellow */
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.todo-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #555;
+  background-color: #2a2a2a; /* Darker gray for input */
+  color: #fff;
+  border-radius: 4px 0 0 4px;
+}
+
+button {
+  background-color: #ffcc00; /* Batman yellow */
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0 4px 4px 0;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #e6b800; /* Slightly darker yellow */
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a; /* Darker gray for items */
+  padding: 10px 15px;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-item span {
+  flex: 1;
+  color: #fff;
+}
+
+.todo-item button {
+  background-color: #f44336; /* Red for delete button */
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.todo-item button:hover {
+  background-color: #d32f2f; /* Darker red */
+}
+
+p {
+  text-align: center;
+  color: #999;
+}
