@@ -1,7 +1,7 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-function TodoList({ todos, toggleComplete, deleteTodo }) {
+function TodoList({ todos, toggleComplete, deleteTodo, updateTodo }) {
     if (todos.length === 0) {
         return <p>No tasks available</p>;
     }
@@ -13,6 +13,7 @@ function TodoList({ todos, toggleComplete, deleteTodo }) {
                     todo={todo}
                     toggleComplete={toggleComplete}
                     deleteTodo={deleteTodo}
+                    updateTodo={updateTodo} 
                 />
             ))}
         </div>

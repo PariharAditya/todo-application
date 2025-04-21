@@ -37,15 +37,23 @@ function App() {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
   };
-  
+
+  const updateTodo = (id, newText) => {
+    const updatedTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, text: newText } : todo
+    );
+    setTodos(updatedTodos);
+  };
+
   return (
     <div className="app-container">
-      <h1>Todo List</h1>
+      <h1>Batman's Todo List</h1>
       <TodoForm addTodo={addTodo} />
       <TodoList
         todos={todos}
         toggleComplete={toggleComplete}
         deleteTodo={deleteTodo}
+        updateTodo={updateTodo}
       />
     </div>
   );
